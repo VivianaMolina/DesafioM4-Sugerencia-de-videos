@@ -13,7 +13,7 @@ export default class Reproductor extends Multimedia {
     }
 
     playMultimedia(){
-        moduloManipulaDom.setAttributeIframe(this.url, this.id);
+        moduloManipulaDom.callPrivateFunction(this.url, this.id);
     };
     setInicio(tiempo) {
        return document.getElementById(`${this.id}`).setAttribute("src", `${this.url};start=${tiempo}`); 

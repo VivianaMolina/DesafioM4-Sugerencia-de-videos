@@ -1,11 +1,13 @@
 import Reproductor from './reproductor.js';
 
 export const moduloManipulaDom = (() => {
+    const setAttributeIframe = (url, id) => {
+        document.getElementById(id).setAttribute("src", url);
+    };
+
     return {
-        setAttributeIframe: (url, id) => {
-            document.getElementById(id).setAttribute("src", url);
-        },
-    }
+        callPrivateFunction: (url, id) => setAttributeIframe(url, id),
+    };
 
 })();
 
